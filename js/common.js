@@ -30,4 +30,17 @@ $(document).ready(function() {
       $('.nav .btn_open').focus();
     });
   });
+
+  $("#gnb ul li a").on('click', function () {
+    const tgNum = $(this).parent().index();
+    const $tg =  $('#container section').eq(tgNum);
+
+    $('#gnb').stop().animate({right: '-22%'}, function () {
+      $(this).css({visibility: 'hidden'});
+    });
+
+    $('html, body').stop().animate({scrollTop: $tg.offset().top});
+
+    return false;
+  });
 });

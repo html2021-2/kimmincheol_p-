@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  
   // 본문2 초기 설정
   $('#content2 .pagenation li:first').addClass('on');
   $('#content2 .cnt2_txt > .txt1').addClass('selected');

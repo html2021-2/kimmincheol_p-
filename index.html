@@ -10,18 +10,20 @@
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/main.css">
   <script src="js/jquery-1.12.4.min.js"></script>
+  <script src="js/script.js"></script>
   <script src="js/common.js"></script>
   <script src="js/main.js"></script>
 </head>
-
 <body>
+  <div id="skip">
+    <a href="#content">본문 바로가기</a>
+  </div>
   <div class="wrap">
-    <div id="skip">
-      <a href="#content">본문 바로가기</a>
-    </div>
     <header id="header">
       <div class="area d_f">
-        <h1 class="logo">KIM MIN CHOEL</h1>
+        <h1 class="logo">
+          <a href="index.html">KIM MIN CHOEL</a>
+        </h1>
         <div class="nav">
           <button class="btn_open" type="button">
             <span class="blind">메뉴창 열기</span>
@@ -32,10 +34,10 @@
           <nav id="gnb">
             <p class="blind">메뉴</p>
             <ul>
-              <li><a href="">HOME</a></li>
-              <li><a href="">PROJECT</a></li>
-              <li><a href="">ABOUT</a></li>
-              <li><a href="">CONTACT</a></li>
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">PROJECT</a></li>
+              <li><a href="#">SKILLS</a></li>
+              <li><a href="#">CONTACT</a></li>
             </ul>
             <button class="btn_close" type="button">
               <span class="blind">닫기</span>
@@ -47,14 +49,9 @@
     </header>
     <div id="container">
       <section id="content1">
-        <div class="area d_f">
-          <h2 class="blind">main</h2>
-          <div class="txtwrap">
-            <p class="txt">안녕하세요. <br> 김민철이라고 합니다.</p>
-          </div>
-          <figure>
-            <img src="images/main.png" alt="">
-          </figure>
+        <div class="e">
+          <h1>PORTFOLIO</h1>
+          <h2>MIN CHEOL's</h2>
         </div>
       </section>
       <section id="content2">
@@ -67,20 +64,24 @@
           <div class="cnt2_txt">
             <div class="txt1">
               <div class="txt_inner">
-                <p class="title">
-                  <span>1.KOGURYEO</span>
-                  <span>COLLEGE renewal</span>
-                </p>
-                <p class="cate">TEAM PROJECT</p>
+                <a href="project.html">
+                  <p class="title">
+                    <span>1.KOGURYEO</span>
+                    <span>COLLEGE renewal</span>
+                  </p>
+                  <p class="cate">TEAM PROJECT</p>
+                </a>
               </div>
             </div>
             <div class="txt2">
               <div class="txt_inner">
-                <p class="title">
-                  <span>2.ASUS</span>
-                  <span>renewal</span>
-                </p>
-                <p class="cate">RESPONSIVE-WEB</p>
+                <a href="project.html">
+                  <p class="title">
+                    <span>2.ASUS</span>
+                    <span>renewal</span>
+                  </p>
+                  <p class="cate">RESPONSIVE-WEB</p>
+                </a>
               </div>
             </div>
           </div>
@@ -91,34 +92,80 @@
         </div>
       </section>
       <section id="content3">
-        <div class="area">
-          <h2 class="cnt_title">ABOUT</h2>
-          <ul>
-            <li>
-              <div class="wave"></div>
-              <p class="subject">HTML + CSS</p>
-              <p class="num"></p>
-            </li>
-            <li>
-              <div class="wave"></div>
-              <p class="subject">jQuery</p>
-              <p class="num"></p>
-            </li>
-            <li>
-              <div class="wave"></div>
-              <p class="subject">PHOTOSHOP</p>
-              <p class="num"></p>
-            </li>
-            <li>
-              <div class="wave"></div>
-              <p class="subject">Zeplin + Github</p>
-              <p class="num"></p>
-            </li>
-          </ul>
-        </div>
+        <h2 class="blind">skills</h2>
+        <div class="chartBarsWrap">
+          <div class="chartBars chartBars1">
+              <ul class="numbers">
+                  <li><span>100%</span></li>
+                  <li><span>80%</span></li>
+                  <li><span>60%</span></li>
+                  <li><span>40%</span></li>
+                  <li><span>20%</span></li>
+                  <li><span>0%</span></li>
+              </ul>
+              <ul class="bars">
+                  <li>
+                      <span class="tooltip"> 
+                      <span class="tooltipContent">계속 발전중입니다.</span>
+                      <div data-percentage="70" class="bar greenBar trigger"></div>
+                      </span>
+                      <b>HTML + CSS</b>
+                  </li>
+                  <li>
+                      <span class="tooltip">  
+                      <span class="tooltipContent">어렵지만 발전중입니다.</span>
+                      <div data-percentage="50" class="bar blueBar trigger"></div>
+                      </span> 
+                      <b>JavaScript + jQuery</b>
+                  </li>
+                  <li>
+                      <span class="tooltip"> 
+                      <span class="tooltipContent">서툴지만 발전중입니다.</span>
+                      <div data-percentage="50" class="bar orangeBar trigger"></div>
+                      </span>
+                      <b>Photoshop + XD</b>
+                  </li>
+                  <li>
+                      <span class="tooltip"> 
+                      <span class="tooltipContent">계속 발전중입니다.</span> 
+                      <div data-percentage="70" class="bar purpleBar trigger"></div>    
+                      </span>
+                      <b>Zeplin + github</b>   
+                  </li>
+              </ul>
+          </div>
+      </div>
       </section>
       <section id="content4">
-        <div class="area"></div>
+        <div class="area">
+          <div class="has-animation animation-ltr" data-delay="50">
+            <p class="bigger">HTML</p>
+          </div>
+          <br>
+          <div class="has-animation animation-rtl" data-delay="500">
+            <p class="text">웹표준과 웹접근성을 준수한 마크업을 할수 있으며 깔끔한 코드 정리를 합니다.<br> 최근 HTML5 시멘틱 태그를 용도에 맞게 사용하며 크로스 브라우징에 대해 이해하고 있습니다.</p>
+          </div>
+          <br>
+          <div class="has-animation animation-ltr" data-delay="50">
+            <p class="bigger">CSS</p>
+          </div>
+          <br>
+          <div class="has-animation animation-rtl" data-delay="500">
+            <p class="text">CSS의 각종 속성을 적절하게 사용하며 IR기법 등 최신의 트렌드를 항상 주의깊게 지켜보고 있습니다.<br> 트랜지션과 트랜스폼, 키프레임을 이용해 간단한 애니메이션을 만들 수 있습니다.</p>
+          </div>
+          <br>
+          <div class="has-animation animation-ltr" data-delay="50">
+            <p class="bigger">javsScript + jQuery</p>
+          </div>
+          <br>
+          <div class="has-animation animation-rtl" data-delay="500">
+            <p class="text">슬라이드나 갤러리와 같은 플러그인의 옵션을 잘 활용하고 디자인에 맞게 적용 할 수 있습니다.<br> 탭메뉴나 레이어팝업과 같은 페이지를 구성할때 자주쓰이는 것들을 스크립트를 사용하여 구현합니다.</p>
+          </div>
+          <br>
+          <div class="has-animation animation-rtl" data-delay="500">
+            <p class="bigger">END ☺</p>
+          </div>
+        </div>
       </section>
     </div>
   </div>
