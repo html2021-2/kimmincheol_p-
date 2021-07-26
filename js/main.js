@@ -1,4 +1,15 @@
 $(document).ready(function() {
+  $("#gnb ul li a").on('click', function () {
+    const $tgContent = $($(this).attr('href'));
+
+    $('#gnb').stop().animate({right: '-22%'}, function () {
+      $(this).css({visibility: 'hidden'});
+    });
+
+    $('html, body').stop().animate({scrollTop: $tgContent.offset().top});
+
+    return false;
+  });
   
   // 본문2 초기 설정
   $('#content2 .pagenation li:first').addClass('on');

@@ -4,7 +4,7 @@
 .btn_open .line{background: #fff;}
 
 #content{overflow: hidden;}
-.controls button{position: fixed; top: 50%; transform: translateY(-50%); font-size: 2.6041vw; color: #fff; z-index: 1000;}
+.controls button{position: fixed; top: 50%; transform: translateY(-50%); font-size: 2.6041vw; color: #fff; z-index: 800;}
 .controls button.disabled{color: rgba(255,255,255,.5);cursor: default;}
 .controls .prev{left:20px;}
 .controls .next{right:20px;}

@@ -10,41 +10,8 @@
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/sub.css">
   <script src="js/jquery-1.12.4.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      let current = 0;
-      $('.controls .prev').addClass('disabled').attr({tabIndex: -1});
-      $('.controls button').on('click', function () {
-        if ($('.item_wrap').is(':animated')) return false;
-
-        const btnNum = $(this).index();
-        if (btnNum === 0) { // 이전
-          if (current === 1){
-            $('html, body').stop().animate({scrollTop: 0}, 'fast', function () {
-              $('.item_wrap').stop().animate({marginLeft: 0});
-            });
-            current--;
-            $('.controls .prev').addClass('disabled').attr({tabIndex: -1}).siblings().removeClass('disabled').removeAttr('tabIndex');
-            console.log(current);
-          }
-        } else { //다음
-          if (current === 0){
-            $('html, body').stop().animate({scrollTop: 0}, 'fast', function () {
-              $('.item_wrap').stop().animate({marginLeft: '-100%'});
-            });
-            current++;
-            $('.controls .next').addClass('disabled').attr({tabIndex: -1}).siblings().removeClass('disabled').removeAttr('tabIndex');
-            console.log(current);
-          }
-        }
-      });
-
-      $('#content .top .btn button').on('click', function () {
-        const pos = $('.btm').offset().top;
-        $('html, body').stop().animate({scrollTop: pos});
-      });
-    });
-  </script>
+  <script src="js/common.js"></script>
+  <script src="js/project.js"></script>
 </head>
 
 <body>
@@ -67,10 +34,10 @@
           <nav id="gnb">
             <p class="blind">메뉴</p>
             <ul>
-              <li><a href="">HOME</a></li>
-              <li><a href="">PROJECT</a></li>
-              <li><a href="">ABOUT</a></li>
-              <li><a href="">CONTACT</a></li>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="index.html#content2">PROJECT</a></li>
+              <li><a href="index.html#content3">ABOUT</a></li>
+              <li><a href="index.html#content5">A11Y</a></li>
             </ul>
             <button class="btn_close" type="button">
               <span class="blind">닫기</span>
