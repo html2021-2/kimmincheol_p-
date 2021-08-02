@@ -30,7 +30,9 @@ $(document).ready(function() {
       $('.nav .btn_open').focus();
     });
   });
+});
 
+$(document).ready(function() {
   /* 
     1) 첫번째 .header과 .panel(tabIndex 0) 활성화 (클래스 .on 추가)
     aria의 state 초기 설정

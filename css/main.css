@@ -62,7 +62,7 @@
 #content3 .area ul li .subject{color:#fff;}
 
 /* cnt4 */
-#content4{background: #30303A; display: flex;align-items: center;}
+#content4{background: #30303A; display: flex; align-items: center; }
 #content4 .area{text-align: center; background: #30303A;}
 #content4 .area div {display: inline-block;}
 #content4 .area .bigger{font-size: 2.0833vw; font-weight: 800; padding: 1.0416vw;text-transform: uppercase;color: #ffb23e; display: inline-block; position: relative;}
@@ -78,53 +78,34 @@
 .has-animation.animation-rtl.animate-in:before {animation: revealRTL 1.8s ease;}
 .has-animation.animation-rtl.animate-in:after {animation: revealRTL 1s 0.6s ease;}
 @keyframes revealRTL {
-  0% {
-    width: 0;
-    right: 0;
-  }
-  65% {
-    width: 100%;
-    right: 0;
-  }
-  100% {
-    width: 0;
-    right: 100%;
-  }
+  0% {width: 0;right: 0;}
+  65% {width: 100%;right: 0;}
+  100% {width: 0;right: 100%;}
 }
 @keyframes revealLTR {
-  0% {
-    width: 0;
-    left: 0;
-  }
-  65% {
-    width: 100%;
-    left: 0;
-  }
-  100% {
-    width: 0;
-    left: 100%;
-  }
+  0% {width: 0;left: 0;}
+  65% {width: 100%;left: 0;}
+  100% {width: 0;left: 100%;}
 }
 @keyframes textHidden {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
 /* cnt5 */
-#content5{background: #30303A;}
+#content5{background: #30303A;padding-top: 5.7291vw;}
 .accordion{width: 1200px;margin: 0 auto; border: 2px solid transparent;border-bottom: 1px solid #aaa;}
+.accordion .tit{background: rgba(0, 0, 0, 0.2);}
+.accordion .panel + .tit{border-top: 1px solid #aaa;}
+.accordion .header{position: relative;width: 100%;padding: 1vw 0.625vw; text-align: center;}
+.accordion .header.on, .accordion .header:focus{background-color: #30303A;}
+.accordion .header::after{content: "\e941";font-family: xeicon;font-size: 1.5vw;position: absolute;right: 30px;top: 50%;transform: translateY(-50%);}
+.accordion .header.on::after{content: "\e944";}
 .accordion span{font-size:2.1875vw;}
 
-.accordion .panel + .tit{border-top: 1px solid #aaa;}
-
-.accordion .header{position: relative;width: 100%;padding: 23px 160px 23px 35px; text-align: center;}
-.accordion .header:focus{background-color: #30303A;}
-.accordion .header::after{content: "";position: absolute;right: 30px;top: 50%;transform: translateY(-50%);width: 16px;height: 9px;background: url("/images/ico.png") no-repeat 0 0;}
-.accordion .header.on::after{background-position: -16px 0;}
 .accordion .panel{visibility: hidden;max-height: 0;overflow: hidden;transition: all 0.5s;}
 .accordion .panel.on{visibility: visible; max-height: 611px;}
-.accordion .panel > div{padding: 0 1.82291vw; background: #30303A; font-size: 25px; text-align: left;}
+.accordion .panel > div{padding: 1.82291vw; background: #30303A; text-align: left;}
+.accordion .panel > div h4{font-size: 2.083vw;}
+.accordion .panel > div p{padding: 1vw; font-size: 1.8229vw;}
+.accordion .panel .img_wrap{display: flex;justify-content: space-between;}
